@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Liora — A Little Date?</title>
+  <meta name="description" content="A little question from someone who wants to take you on a date.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="app">
+    <div class="topbar">
+      <span class="brand">LIORA</span>
+      <span class="tiny-heart">♥</span>
+    </div>
+
+    <section class="screen active" id="questionScreen">
+      <div class="eyebrow">A LITTLE QUESTION</div>
+      <div class="heart-orbit"><span>♥</span></div>
+      <h1>Will you go on<br><em>a date with me?</em></h1>
+      <p class="lead">No pressure… except that I really, really hope you say yes. 🥹</p>
+
+      <div class="answer-area" id="answerArea">
+        <button class="btn yes" id="yesBtn">YES, I'D LOVE TO 💖</button>
+        <button class="btn no" id="noBtn">No 🙈</button>
+      </div>
+      <p class="tease" id="tease"></p>
+    </section>
+
+    <section class="screen" id="dateScreen">
+      <div class="eyebrow">LET'S PLAN IT</div>
+      <h2>Now you get to<br><em>choose the date.</em></h2>
+      <p class="lead">Pick the day and time that works best for you. ❤️</p>
+
+      <div class="form-card">
+        <label for="date">📅 Date</label>
+        <input type="date" id="date">
+
+        <label for="time">⏰ Time</label>
+        <input type="time" id="time">
+      </div>
+
+      <button class="btn primary next" id="toMealBtn">Next: choose our meal →</button>
+      <p class="error" id="dateError"></p>
+    </section>
+
+    <section class="screen" id="mealScreen">
+      <div class="eyebrow">THE IMPORTANT PART</div>
+      <h2>What are<br><em>we eating?</em> 🍽️</h2>
+      <p class="lead">Your choice. I promise not to complain. 😌</p>
+
+      <div class="meal-grid" id="mealGrid">
+        <button class="meal" data-meal="Pizza">🍕<strong>Pizza</strong></button>
+        <button class="meal" data-meal="Burger">🍔<strong>Burger</strong></button>
+        <button class="meal" data-meal="Chicken & Chips">🍗<strong>Chicken & Chips</strong></button>
+        <button class="meal" data-meal="Pasta">🍝<strong>Pasta</strong></button>
+        <button class="meal" data-meal="Rice & Chicken">🍚<strong>Rice & Chicken</strong></button>
+        <button class="meal" data-meal="Something special">✨<strong>Something special</strong></button>
+      </div>
+
+      <div class="custom-meal">
+        <input id="customMeal" type="text" maxlength="60" placeholder="Or type your own meal…">
+      </div>
+
+      <button class="btn primary next" id="toConfirmBtn">Let's see our plan →</button>
+      <p class="error" id="mealError"></p>
+    </section>
+
+    <section class="screen" id="confirmScreen">
+      <div class="eyebrow">ONE LAST THING</div>
+      <h2>So… we have<br><em>a date? ❤️</em></h2>
+      <p class="lead">Here is what you chose.</p>
+
+      <div class="summary-card">
+        <div><span>📅</span><section><small>DATE</small><strong id="summaryDate">—</strong></section></div>
+        <div><span>⏰</span><section><small>TIME</small><strong id="summaryTime">—</strong></section></div>
+        <div><span>🍽️</span><section><small>MEAL</small><strong id="summaryMeal">—</strong></section></div>
+      </div>
+
+      <button class="btn primary" id="confirmBtn">CONFIRM OUR DATE 💖</button>
+      <button class="text-btn" id="backBtn">← Let me change something</button>
+    </section>
+
+    <section class="screen final-screen" id="finalScreen">
+      <div class="confetti" id="confetti"></div>
+      <div class="success-heart">♥</div>
+      <div class="eyebrow">IT'S OFFICIAL</div>
+      <h1>We have<br><em>a date! 🎉</em></h1>
+      <p class="lead">I can't wait to spend some time with you. ❤️</p>
+      <div class="summary-card compact">
+        <div><span>📅</span><section><small>DATE</small><strong id="finalDate">—</strong></section></div>
+        <div><span>⏰</span><section><small>TIME</small><strong id="finalTime">—</strong></section></div>
+        <div><span>🍽️</span><section><small>MEAL</small><strong id="finalMeal">—</strong></section></div>
+      </div>
+      <p class="final-note">“The best dates start with a little courage.”</p>
+    </section>
+
+    <footer>Made with a little courage & a lot of ❤️</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
